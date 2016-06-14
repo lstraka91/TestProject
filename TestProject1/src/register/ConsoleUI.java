@@ -105,9 +105,8 @@ public class ConsoleUI {
 		String name = readLine();
 		System.out.println("Enter Phone Number: ");
 		String phoneNumber = readLine();
-		if (register.findPersonByName(name).getName() == null
-				&& register.findPersonByPhoneNumber(phoneNumber)
-						.getPhoneNumber() == null) {
+ 		if (register.findPersonByName(name) == null
+				|| register.findPersonByPhoneNumber(phoneNumber) == null) {
 
 			register.addPerson(new Person(name, phoneNumber));
 		} else {
